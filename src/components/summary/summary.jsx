@@ -6,6 +6,7 @@ function Summary({ alimentacion, hotel, destino, total }) {
         <p>Hotel: {hotel ? hotel.nombre : 'No seleccionado'}</p>
         <p>Destino: {destino ? destino.nombre : 'No seleccionado'}</p>
         <h3>Total: ${total}</h3>
+        <img></img>
       </div>
     );
   }
