@@ -21,6 +21,7 @@ function App() {
           alimentacion={selectedAlimentacion}
           hotel={selectedHotel}
           destino={selectedDestino}
+          Estrellas={selectedHotel}
           total={total}
         />
       </div>
