@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { planDeViajes } from './data/data';
-import { AlimentacionCard, HotelCard, DestinoCard, Summary } from './components/index';
+import { AlimentacionCard, HotelCard, DestinoCard, Summary } from './components';
+import './App.css'; 
 
 function App() {
   const [selectedAlimentacion, setSelectedAlimentacion] = useState(null);
@@ -14,9 +15,18 @@ function App() {
                 (selectedDestino?.precio || 0);
 
   return (
-    <div>
-      <div>
-        <h2>Elige tu Alimentación</h2>
+    <div className="container">
+      <div className="left-section">
+        <Summary
+          alimentacion={selectedAlimentacion}
+          hotel={selectedHotel}
+          destino={selectedDestino}
+          total={total}
+        />
+      </div>
+      <div className="right-section">
+        
+        <div className='righ1'><h2>Elige tu Alimentación</h2>
         {planDeViajes.alimentacion.map((item) => (
           <AlimentacionCard
             key={item.titulo}
@@ -24,8 +34,9 @@ function App() {
             isSelected={selectedAlimentacion === item}
             onSelect={() => setSelectedAlimentacion(item)}
           />
-        ))}
-        <h2>Elige tu Hotel</h2>
+        ))}</div>
+        <div className='righ2'>
+          <h2>Elige tu Hotel</h2>
         {planDeViajes.hoteles.map((hotel) => (
           <HotelCard
             key={hotel.nombre}
@@ -34,7 +45,9 @@ function App() {
             onSelect={() => setSelectedHotel(hotel)}
           />
         ))}
-        <h2>Elige tu Destino</h2>
+        </div>
+       
+        <div className='righ3'><h2>Elige tu Destino</h2>
         {destinosArray.map((destino) => (
           <DestinoCard
             key={destino.nombre}
@@ -42,15 +55,8 @@ function App() {
             isSelected={selectedDestino === destino}
             onSelect={() => setSelectedDestino(destino)}
           />
-        ))}
-      </div>
-      <div>
-        <Summary
-          alimentacion={selectedAlimentacion}
-          hotel={selectedHotel}
-          destino={selectedDestino}
-          total={total}
-        />
+        ))}</div>
+        
       </div>
     </div>
   );

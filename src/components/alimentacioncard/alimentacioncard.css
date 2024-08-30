@@ -1,0 +1,36 @@
+.alimentacion-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+ 
+  }
+  
+  .alimentacion-card img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .alimentacion-card h3,
+  .alimentacion-card p {
+    margin: 8px 0;
+  }
+  
+  .alimentacion-card input[type="radio"] {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    opacity: 0;
+  }
+  
+  .alimentacion-card.selected {
+    border-color: #4A5567;
+    border-width: 2px;
+  }
+  

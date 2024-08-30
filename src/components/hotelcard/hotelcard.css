@@ -1,0 +1,45 @@
+.hotel-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .hotel-card img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .hotel-card h3,
+  .hotel-card p {
+    margin: 8px 0;
+  }
+  
+  .hotel-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .hotel-card ul li {
+    margin: 4px 0;
+  }
+  
+  .hotel-card input[type="radio"] {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    opacity: 0;
+  }
+  
+  .hotel-card.selected {
+    border-color: #4A5567;
+    border-width: 2px;
+  }
+  
